@@ -27,7 +27,11 @@ At the end of the script, you should see a message to show you how to access the
 Open http://xx.xx.xx.xx in your browser to access the app
 ```
 ### Design
-- A simple EC2 which exposes 
+I am trying to make the deployment as automated as possible without relying on much human interaction. The `make apply` target takes care of the entire deployment process by
+- Verifying all the requirements are fullfilled ( AWS key and Terraform )
+- Generating ssh keypair
+- Applying infrastructure on AWS through Terraform
+- Monitoring the process of deployment and prints log to the standard output
 
 ## Shortcoming of this design
 - It's not highly available, only lives on one availability zone.
