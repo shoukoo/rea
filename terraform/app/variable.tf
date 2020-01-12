@@ -1,5 +1,5 @@
 locals {
-  terraform = "gitlab.com/jadder-repo/jadder-infra/${basename(path.cwd)}"
+  terraform = "gitlab.com/shoukoo/rea/terraform/${basename(path.cwd)}"
 }
 
 provider "aws" {

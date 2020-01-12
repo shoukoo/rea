@@ -2,7 +2,7 @@
 
 ## Requirements
  - macOS
- - terraform > version 0.12
+ - terraform version > 0.12
  - AWS account
  - export AWS_SECRET_ACCESS_KEY env variable
  - export AWS_ACCESS_KEY_ID env variable
@@ -26,8 +26,10 @@ At the end of the script, you should see a message to show you how to access the
 # The message looks like this
 Open http://xx.xx.xx.xx in your browser to access the app
 ```
+### Design
+- A simple EC2 which exposes 
 
-### Shortcoming of this design
+## Shortcoming of this design
 - It's not highly available, only lives on one availability zone.
 - Monolith design only can scale vertically. I would add an ELB and auto-scaling group to mitigate the issue
 - Port 22 is exposed to the internet, I would implement a VPN to strengthen the security.
